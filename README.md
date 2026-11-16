@@ -60,6 +60,10 @@ as a Codespaces secret (or in `.env`), run `streamlit run app.py`, and open the 
 ## License 
 MIT
 
+**Note on dependencies:** PDF parsing uses [PyMuPDF](https://github.com/pymupdf/PyMuPDF),
+which is licensed under AGPL-3.0 (a commercial license is also available from Artifex).
+If you plan to deploy this project as a public service or distribute it commercially,
+please review the PyMuPDF license terms first. Other dependencies have their own licenses.
 
 ## Author
 Manasvi Jain
