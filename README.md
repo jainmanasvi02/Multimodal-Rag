@@ -57,5 +57,9 @@ as a Codespaces secret (or in `.env`), run `streamlit run app.py`, and open the 
 - Only embedded raster images are indexed, not vector-drawn charts.
 - Similarity thresholds are heuristic; an evaluation set would let them be tuned properly.
 
+## License 
+MIT
+
+
 ## Author
 Manasvi Jain
