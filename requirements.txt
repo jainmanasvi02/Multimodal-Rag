@@ -1,0 +1,15 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+transformers
+pillow
+numpy
+pymupdf
+faiss-cpu
+langchain
+langchain-community
+langchain-text-splitters
+langchain-google-genai
+google-genai
+langgraph
+python-dotenv
+streamlit
