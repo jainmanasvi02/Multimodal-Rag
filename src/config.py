@@ -18,3 +18,4 @@ IMAGE_MIN_SIM = float(os.getenv("IMAGE_MIN_SIM", "0.20"))
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 100
 MAX_IMAGE_SIDE = 1024  # images are downscaled before being sent to the LLM
+TOP_K_IMAGES = 2

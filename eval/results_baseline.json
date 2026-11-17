@@ -1,0 +1,1304 @@
+{
+  "config": {
+    "clip": "openai/clip-vit-base-patch32",
+    "k": 5,
+    "text_thr": 0.55,
+    "image_thr": 0.2,
+    "n_pdfs": 3,
+    "n_text": 10,
+    "n_images": 4
+  },
+  "summary": {
+    "text": {
+      "n": 13,
+      "hit@1": 0.46153846153846156,
+      "hit@k": 1.0,
+      "mrr": 0.6692307692307692,
+      "gate_open": 1.0,
+      "kept_hit": 1.0
+    },
+    "image": {
+      "n": 7,
+      "hit@1": 0.0,
+      "hit@k": 0.0,
+      "mrr": 0.0,
+      "gate_open": 1.0,
+      "kept_hit": 0.0
+    },
+    "all": {
+      "n": 20,
+      "hit@1": 0.3,
+      "hit@k": 0.65,
+      "mrr": 0.43499999999999994,
+      "gate_open": 1.0,
+      "kept_hit": 0.65
+    },
+    "offtopic_easy": {
+      "n": 4,
+      "blocked": 0.0
+    },
+    "offtopic_hard": {
+      "n": 3,
+      "blocked": 0.0
+    }
+  },
+  "llm_summary": null,
+  "suggested_thresholds": {
+    "text_min_sim": 0.75,
+    "image_min_sim": 0.22,
+    "kept_hit": 0.3,
+    "easy_blocked": 1.0,
+    "score": 0.65,
+    "n_equally_good": 25
+  },
+  "questions": [
+    {
+      "id": "t01",
+      "question": "What was Acme's total revenue in 2025?",
+      "kind": "text",
+      "source": "acme_annual_report.pdf",
+      "page": 0,
+      "answer_contains": [
+        "48.2"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8088
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7655
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7301
+        },
+        {
+          "rank": 4,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6853
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6781
+        }
+      ]
+    },
+    {
+      "id": "t02",
+      "question": "How many employees does Acme have?",
+      "kind": "text",
+      "source": "acme_annual_report.pdf",
+      "page": 0,
+      "answer_contains": [
+        "310"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7327
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6587
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6217
+        },
+        {
+          "rank": 4,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6161
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.5779
+        }
+      ]
+    },
+    {
+      "id": "t03",
+      "question": "Which product drove Acme's growth in Q3?",
+      "kind": "text",
+      "source": "acme_annual_report.pdf",
+      "page": 1,
+      "answer_contains": [
+        "atlas"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8258
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.772
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7019
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6716
+        },
+        {
+          "rank": 5,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.669
+        }
+      ]
+    },
+    {
+      "id": "t04",
+      "question": "What was Acme's annual customer churn rate?",
+      "kind": "text",
+      "source": "acme_annual_report.pdf",
+      "page": 2,
+      "answer_contains": [
+        "4.3"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7519
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.677
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6534
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.637
+        },
+        {
+          "rank": 5,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6364
+        }
+      ]
+    },
+    {
+      "id": "t05",
+      "question": "What revenue target has Acme set for 2026?",
+      "kind": "text",
+      "source": "acme_annual_report.pdf",
+      "page": 3,
+      "answer_contains": [
+        "55"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8153
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7953
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7752
+        },
+        {
+          "rank": 4,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7128
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6839
+        }
+      ]
+    },
+    {
+      "id": "t06",
+      "question": "What is the capacity of the BrewMaster water tank?",
+      "kind": "text",
+      "source": "brewmaster_manual.pdf",
+      "page": 0,
+      "answer_contains": [
+        "1.8"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7404
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7252
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6788
+        },
+        {
+          "rank": 4,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6738
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6734
+        }
+      ]
+    },
+    {
+      "id": "t07",
+      "question": "How long is the BrewMaster 3000 warranty?",
+      "kind": "text",
+      "source": "brewmaster_manual.pdf",
+      "page": 0,
+      "answer_contains": [
+        "2-year",
+        "2 year",
+        "two year",
+        "two-year"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6867
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6801
+        },
+        {
+          "rank": 4,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6781
+        },
+        {
+          "rank": 5,
+          "source": "brewmaster_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6648
+        }
+      ]
+    },
+    {
+      "id": "t08",
+      "question": "What does error E7 mean on the coffee machine?",
+      "kind": "text",
+      "source": "brewmaster_manual.pdf",
+      "page": 2,
+      "answer_contains": [
+        "clog"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7232
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6473
+        },
+        {
+          "rank": 3,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6454
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.637
+        },
+        {
+          "rank": 5,
+          "source": "brewmaster_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6148
+        }
+      ]
+    },
+    {
+      "id": "t09",
+      "question": "How often should the coffee machine be descaled?",
+      "kind": "text",
+      "source": "brewmaster_manual.pdf",
+      "page": 2,
+      "answer_contains": [
+        "3 months",
+        "three months"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7086
+        },
+        {
+          "rank": 2,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6988
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6848
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6635
+        },
+        {
+          "rank": 5,
+          "source": "brewmaster_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6178
+        }
+      ]
+    },
+    {
+      "id": "t10",
+      "question": "How many buoys were used in the temperature study?",
+      "kind": "text",
+      "source": "climate_study_summary.pdf",
+      "page": 0,
+      "answer_contains": [
+        "42"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8261
+        },
+        {
+          "rank": 2,
+          "source": "climate_study_summary.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6757
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6663
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6563
+        },
+        {
+          "rank": 5,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6209
+        }
+      ]
+    },
+    {
+      "id": "t11",
+      "question": "By how much did mean sea surface temperature rise between 2000 and 2024?",
+      "kind": "text",
+      "source": "climate_study_summary.pdf",
+      "page": 0,
+      "answer_contains": [
+        "0.9"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8354
+        },
+        {
+          "rank": 2,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7657
+        },
+        {
+          "rank": 3,
+          "source": "climate_study_summary.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7556
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7226
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7005
+        }
+      ]
+    },
+    {
+      "id": "t12",
+      "question": "Which statistical method was used to estimate temperature trends?",
+      "kind": "text",
+      "source": "climate_study_summary.pdf",
+      "page": 2,
+      "answer_contains": [
+        "regression"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8427
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7692
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7646
+        },
+        {
+          "rank": 4,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6853
+        },
+        {
+          "rank": 5,
+          "source": "climate_study_summary.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6754
+        }
+      ]
+    },
+    {
+      "id": "t13",
+      "question": "Who funded the sea temperature study?",
+      "kind": "text",
+      "source": "climate_study_summary.pdf",
+      "page": 2,
+      "answer_contains": [
+        "national ocean research fund"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8532
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7324
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7228
+        },
+        {
+          "rank": 4,
+          "source": "climate_study_summary.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7018
+        },
+        {
+          "rank": 5,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6522
+        }
+      ]
+    },
+    {
+      "id": "i01",
+      "question": "According to the pie chart, which region contributes the largest share of revenue?",
+      "kind": "image",
+      "source": "acme_annual_report.pdf",
+      "page": 2,
+      "answer_contains": [
+        "north america"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7306
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7075
+        },
+        {
+          "rank": 3,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6578
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6538
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6231
+        }
+      ]
+    },
+    {
+      "id": "i02",
+      "question": "What percentage of revenue comes from Asia in the revenue by region chart?",
+      "kind": "image",
+      "source": "acme_annual_report.pdf",
+      "page": 2,
+      "answer_contains": [
+        "25"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7689
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7306
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7196
+        },
+        {
+          "rank": 4,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7057
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6723
+        }
+      ]
+    },
+    {
+      "id": "i03",
+      "question": "Which quarter has the tallest bar in the quarterly revenue chart?",
+      "kind": "image",
+      "source": "acme_annual_report.pdf",
+      "page": 1,
+      "answer_contains": [
+        "q4"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.8162
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7167
+        },
+        {
+          "rank": 3,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7088
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6664
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6471
+        }
+      ]
+    },
+    {
+      "id": "i04",
+      "question": "In the coffee machine parts diagram, which component sits directly below the brew head?",
+      "kind": "image",
+      "source": "brewmaster_manual.pdf",
+      "page": 1,
+      "answer_contains": [
+        "drip tray"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7657
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7205
+        },
+        {
+          "rank": 3,
+          "source": "brewmaster_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6896
+        },
+        {
+          "rank": 4,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6235
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6212
+        }
+      ]
+    },
+    {
+      "id": "i05",
+      "question": "Which components are labeled in the coffee machine parts diagram?",
+      "kind": "image",
+      "source": "brewmaster_manual.pdf",
+      "page": 1,
+      "answer_contains": [
+        "control panel",
+        "water tank",
+        "brew head",
+        "drip tray"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.731
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6857
+        },
+        {
+          "rank": 3,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6189
+        },
+        {
+          "rank": 4,
+          "source": "brewmaster_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6133
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6117
+        }
+      ]
+    },
+    {
+      "id": "i06",
+      "question": "In which year does the sea surface temperature chart reach its peak?",
+      "kind": "image",
+      "source": "climate_study_summary.pdf",
+      "page": 1,
+      "answer_contains": [
+        "2016"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8119
+        },
+        {
+          "rank": 2,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7896
+        },
+        {
+          "rank": 3,
+          "source": "climate_study_summary.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7201
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6776
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6681
+        }
+      ]
+    },
+    {
+      "id": "i07",
+      "question": "What does the vertical axis of the temperature chart measure?",
+      "kind": "image",
+      "source": "climate_study_summary.pdf",
+      "page": 1,
+      "answer_contains": [
+        "temperature"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7824
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7289
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7183
+        },
+        {
+          "rank": 4,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6791
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6283
+        }
+      ]
+    },
+    {
+      "id": "o01",
+      "question": "What is the capital of France?",
+      "kind": "offtopic",
+      "difficulty": "easy",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6825
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6814
+        },
+        {
+          "rank": 3,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6704
+        },
+        {
+          "rank": 4,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6142
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6127
+        }
+      ]
+    },
+    {
+      "id": "o02",
+      "question": "Who won the FIFA World Cup in 2018?",
+      "kind": "offtopic",
+      "difficulty": "easy",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7414
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.735
+        },
+        {
+          "rank": 3,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6992
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6487
+        },
+        {
+          "rank": 5,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.603
+        }
+      ]
+    },
+    {
+      "id": "o03",
+      "question": "How do I bake sourdough bread at home?",
+      "kind": "offtopic",
+      "difficulty": "easy",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6627
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6574
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6568
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6547
+        },
+        {
+          "rank": 5,
+          "source": "brewmaster_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.5658
+        }
+      ]
+    },
+    {
+      "id": "o04",
+      "question": "Explain how photosynthesis works.",
+      "kind": "offtopic",
+      "difficulty": "easy",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6915
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.675
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6618
+        },
+        {
+          "rank": 4,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6347
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.5893
+        }
+      ]
+    },
+    {
+      "id": "o05",
+      "question": "What is the warranty period of the Atlas X200 laptop?",
+      "kind": "offtopic",
+      "difficulty": "hard",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6836
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6788
+        },
+        {
+          "rank": 3,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6135
+        },
+        {
+          "rank": 4,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.603
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.5975
+        }
+      ]
+    },
+    {
+      "id": "o06",
+      "question": "What was Acme's total revenue in 2019?",
+      "kind": "offtopic",
+      "difficulty": "hard",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8329
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.806
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7334
+        },
+        {
+          "rank": 4,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6869
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6507
+        }
+      ]
+    },
+    {
+      "id": "o07",
+      "question": "How much does the BrewMaster descaling solution cost?",
+      "kind": "offtopic",
+      "difficulty": "hard",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.717
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7109
+        },
+        {
+          "rank": 3,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7099
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6997
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6196
+        }
+      ]
+    }
+  ]
+}

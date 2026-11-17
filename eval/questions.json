@@ -1,0 +1,251 @@
+[
+  {
+    "id": "t01",
+    "question": "What was Acme's total revenue in 2025?",
+    "kind": "text",
+    "source": "acme_annual_report.pdf",
+    "page": 0,
+    "answer_contains": [
+      "48.2"
+    ]
+  },
+  {
+    "id": "t02",
+    "question": "How many employees does Acme have?",
+    "kind": "text",
+    "source": "acme_annual_report.pdf",
+    "page": 0,
+    "answer_contains": [
+      "310"
+    ]
+  },
+  {
+    "id": "t03",
+    "question": "Which product drove Acme's growth in Q3?",
+    "kind": "text",
+    "source": "acme_annual_report.pdf",
+    "page": 1,
+    "answer_contains": [
+      "atlas"
+    ]
+  },
+  {
+    "id": "t04",
+    "question": "What was Acme's annual customer churn rate?",
+    "kind": "text",
+    "source": "acme_annual_report.pdf",
+    "page": 2,
+    "answer_contains": [
+      "4.3"
+    ]
+  },
+  {
+    "id": "t05",
+    "question": "What revenue target has Acme set for 2026?",
+    "kind": "text",
+    "source": "acme_annual_report.pdf",
+    "page": 3,
+    "answer_contains": [
+      "55"
+    ]
+  },
+  {
+    "id": "t06",
+    "question": "What is the capacity of the BrewMaster water tank?",
+    "kind": "text",
+    "source": "brewmaster_manual.pdf",
+    "page": 0,
+    "answer_contains": [
+      "1.8"
+    ]
+  },
+  {
+    "id": "t07",
+    "question": "How long is the BrewMaster 3000 warranty?",
+    "kind": "text",
+    "source": "brewmaster_manual.pdf",
+    "page": 0,
+    "answer_contains": [
+      "2-year",
+      "2 year",
+      "two year",
+      "two-year"
+    ]
+  },
+  {
+    "id": "t08",
+    "question": "What does error E7 mean on the coffee machine?",
+    "kind": "text",
+    "source": "brewmaster_manual.pdf",
+    "page": 2,
+    "answer_contains": [
+      "clog"
+    ]
+  },
+  {
+    "id": "t09",
+    "question": "How often should the coffee machine be descaled?",
+    "kind": "text",
+    "source": "brewmaster_manual.pdf",
+    "page": 2,
+    "answer_contains": [
+      "3 months",
+      "three months"
+    ]
+  },
+  {
+    "id": "t10",
+    "question": "How many buoys were used in the temperature study?",
+    "kind": "text",
+    "source": "climate_study_summary.pdf",
+    "page": 0,
+    "answer_contains": [
+      "42"
+    ]
+  },
+  {
+    "id": "t11",
+    "question": "By how much did mean sea surface temperature rise between 2000 and 2024?",
+    "kind": "text",
+    "source": "climate_study_summary.pdf",
+    "page": 0,
+    "answer_contains": [
+      "0.9"
+    ]
+  },
+  {
+    "id": "t12",
+    "question": "Which statistical method was used to estimate temperature trends?",
+    "kind": "text",
+    "source": "climate_study_summary.pdf",
+    "page": 2,
+    "answer_contains": [
+      "regression"
+    ]
+  },
+  {
+    "id": "t13",
+    "question": "Who funded the sea temperature study?",
+    "kind": "text",
+    "source": "climate_study_summary.pdf",
+    "page": 2,
+    "answer_contains": [
+      "national ocean research fund"
+    ]
+  },
+  {
+    "id": "i01",
+    "question": "According to the pie chart, which region contributes the largest share of revenue?",
+    "kind": "image",
+    "source": "acme_annual_report.pdf",
+    "page": 2,
+    "answer_contains": [
+      "north america"
+    ]
+  },
+  {
+    "id": "i02",
+    "question": "What percentage of revenue comes from Asia in the revenue by region chart?",
+    "kind": "image",
+    "source": "acme_annual_report.pdf",
+    "page": 2,
+    "answer_contains": [
+      "25"
+    ]
+  },
+  {
+    "id": "i03",
+    "question": "Which quarter has the tallest bar in the quarterly revenue chart?",
+    "kind": "image",
+    "source": "acme_annual_report.pdf",
+    "page": 1,
+    "answer_contains": [
+      "q4"
+    ]
+  },
+  {
+    "id": "i04",
+    "question": "In the coffee machine parts diagram, which component sits directly below the brew head?",
+    "kind": "image",
+    "source": "brewmaster_manual.pdf",
+    "page": 1,
+    "answer_contains": [
+      "drip tray"
+    ]
+  },
+  {
+    "id": "i05",
+    "question": "Which components are labeled in the coffee machine parts diagram?",
+    "kind": "image",
+    "source": "brewmaster_manual.pdf",
+    "page": 1,
+    "answer_contains": [
+      "control panel",
+      "water tank",
+      "brew head",
+      "drip tray"
+    ]
+  },
+  {
+    "id": "i06",
+    "question": "In which year does the sea surface temperature chart reach its peak?",
+    "kind": "image",
+    "source": "climate_study_summary.pdf",
+    "page": 1,
+    "answer_contains": [
+      "2016"
+    ]
+  },
+  {
+    "id": "i07",
+    "question": "What does the vertical axis of the temperature chart measure?",
+    "kind": "image",
+    "source": "climate_study_summary.pdf",
+    "page": 1,
+    "answer_contains": [
+      "temperature"
+    ]
+  },
+  {
+    "id": "o01",
+    "question": "What is the capital of France?",
+    "kind": "offtopic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "o02",
+    "question": "Who won the FIFA World Cup in 2018?",
+    "kind": "offtopic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "o03",
+    "question": "How do I bake sourdough bread at home?",
+    "kind": "offtopic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "o04",
+    "question": "Explain how photosynthesis works.",
+    "kind": "offtopic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "o05",
+    "question": "What is the warranty period of the Atlas X200 laptop?",
+    "kind": "offtopic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "o06",
+    "question": "What was Acme's total revenue in 2019?",
+    "kind": "offtopic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "o07",
+    "question": "How much does the BrewMaster descaling solution cost?",
+    "kind": "offtopic",
+    "difficulty": "hard"
+  }
+]
