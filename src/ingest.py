@@ -68,11 +68,18 @@ def ingest_pdf(name: str, data: bytes):
 
 
 def ingest_files(files: list[tuple[str, bytes]]):
-    """Ingest several PDFs: files is a list of (filename, bytes)."""
+    """Ingest several PDFs: files is a list of (filename, bytes). Identical text chunks are kept once."""
     all_docs, all_embs, all_images = [], [], {}
+    seen_texts = set()
     for name, data in files:
         docs, embs, images = ingest_pdf(name, data)
-        all_docs += docs
-        all_embs += embs
+        for doc, emb in zip(docs, embs):
+            if doc.metadata["type"] == "text":
+                key = " ".join(doc.page_content.split()).lower()
+                if key in seen_texts:
+                    continue  # repeated boilerplate: already indexed
+                seen_texts.add(key)
+            all_docs.append(doc)
+            all_embs.append(emb)
         all_images.update(images)
     return all_docs, all_embs, all_images
