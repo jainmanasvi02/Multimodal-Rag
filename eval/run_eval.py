@@ -21,6 +21,7 @@ import statistics
 import sys
 import time
 from pathlib import Path
+import re
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -73,11 +74,21 @@ def run_retrieval(questions, vector_store, k):
                     "page": doc.metadata["page"],
                     "type": kind,
                     "sim": round(float(sim), 4),
+                    "text": re.sub(r"\s+", " ", doc.page_content) if kind == "text" else "",
                 }
             )
         results.append({**q, "retrieved": items})
     return results
 
+
+def matches(item, q):
+    """Right source, page and kind; for text questions the chunk must also contain the answer."""
+    if not (item["source"] == q["source"] and item["page"] == q["page"] and item["type"] == q["kind"]):
+        return False
+    if q["kind"] == "text" and "text" in item:
+        text = item["text"].lower()
+        return any(k.lower() in text for k in q["answer_contains"])
+    return True
 
 # ------------------------------------------------------------------ metrics
 def summarize(results, text_thr, image_thr):
