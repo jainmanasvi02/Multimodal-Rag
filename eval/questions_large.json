@@ -1,0 +1,794 @@
+[
+  {
+    "id": "t01",
+    "question": "What was Acme's total revenue in 2025?",
+    "kind": "text",
+    "source": "acme_annual_report.pdf",
+    "page": 0,
+    "answer_contains": [
+      "48.2"
+    ]
+  },
+  {
+    "id": "t02",
+    "question": "How many employees does Acme have?",
+    "kind": "text",
+    "source": "acme_annual_report.pdf",
+    "page": 0,
+    "answer_contains": [
+      "310"
+    ]
+  },
+  {
+    "id": "t03",
+    "question": "Which product drove Acme's growth in Q3?",
+    "kind": "text",
+    "source": "acme_annual_report.pdf",
+    "page": 1,
+    "answer_contains": [
+      "atlas"
+    ]
+  },
+  {
+    "id": "t04",
+    "question": "What was Acme's annual customer churn rate?",
+    "kind": "text",
+    "source": "acme_annual_report.pdf",
+    "page": 2,
+    "answer_contains": [
+      "4.3"
+    ]
+  },
+  {
+    "id": "t05",
+    "question": "What revenue target has Acme set for 2026?",
+    "kind": "text",
+    "source": "acme_annual_report.pdf",
+    "page": 3,
+    "answer_contains": [
+      "55"
+    ]
+  },
+  {
+    "id": "t06",
+    "question": "What is the capacity of the BrewMaster water tank?",
+    "kind": "text",
+    "source": "brewmaster_manual.pdf",
+    "page": 0,
+    "answer_contains": [
+      "1.8"
+    ]
+  },
+  {
+    "id": "t07",
+    "question": "How long is the BrewMaster 3000 warranty?",
+    "kind": "text",
+    "source": "brewmaster_manual.pdf",
+    "page": 0,
+    "answer_contains": [
+      "2-year",
+      "2 year",
+      "two year",
+      "two-year"
+    ]
+  },
+  {
+    "id": "t08",
+    "question": "What does error E7 mean on the coffee machine?",
+    "kind": "text",
+    "source": "brewmaster_manual.pdf",
+    "page": 2,
+    "answer_contains": [
+      "clog"
+    ]
+  },
+  {
+    "id": "t09",
+    "question": "How often should the coffee machine be descaled?",
+    "kind": "text",
+    "source": "brewmaster_manual.pdf",
+    "page": 2,
+    "answer_contains": [
+      "3 months",
+      "three months"
+    ]
+  },
+  {
+    "id": "t10",
+    "question": "How many buoys were used in the temperature study?",
+    "kind": "text",
+    "source": "climate_study_summary.pdf",
+    "page": 0,
+    "answer_contains": [
+      "42"
+    ]
+  },
+  {
+    "id": "t11",
+    "question": "By how much did mean sea surface temperature rise between 2000 and 2024?",
+    "kind": "text",
+    "source": "climate_study_summary.pdf",
+    "page": 0,
+    "answer_contains": [
+      "0.9"
+    ]
+  },
+  {
+    "id": "t12",
+    "question": "Which statistical method was used to estimate temperature trends?",
+    "kind": "text",
+    "source": "climate_study_summary.pdf",
+    "page": 2,
+    "answer_contains": [
+      "regression"
+    ]
+  },
+  {
+    "id": "t13",
+    "question": "Who funded the sea temperature study?",
+    "kind": "text",
+    "source": "climate_study_summary.pdf",
+    "page": 2,
+    "answer_contains": [
+      "national ocean research fund"
+    ]
+  },
+  {
+    "id": "i01",
+    "question": "According to the pie chart, which region contributes the largest share of revenue?",
+    "kind": "image",
+    "source": "acme_annual_report.pdf",
+    "page": 2,
+    "answer_contains": [
+      "north america"
+    ]
+  },
+  {
+    "id": "i02",
+    "question": "What percentage of revenue comes from Asia in the revenue by region chart?",
+    "kind": "image",
+    "source": "acme_annual_report.pdf",
+    "page": 2,
+    "answer_contains": [
+      "25"
+    ]
+  },
+  {
+    "id": "i03",
+    "question": "Which quarter has the tallest bar in the quarterly revenue chart?",
+    "kind": "image",
+    "source": "acme_annual_report.pdf",
+    "page": 1,
+    "answer_contains": [
+      "q4"
+    ]
+  },
+  {
+    "id": "i04",
+    "question": "In the coffee machine parts diagram, which component sits directly below the brew head?",
+    "kind": "image",
+    "source": "brewmaster_manual.pdf",
+    "page": 1,
+    "answer_contains": [
+      "drip tray"
+    ]
+  },
+  {
+    "id": "i05",
+    "question": "Which components are labeled in the coffee machine parts diagram?",
+    "kind": "image",
+    "source": "brewmaster_manual.pdf",
+    "page": 1,
+    "answer_contains": [
+      "control panel",
+      "water tank",
+      "brew head",
+      "drip tray"
+    ]
+  },
+  {
+    "id": "i06",
+    "question": "In which year does the sea surface temperature chart reach its peak?",
+    "kind": "image",
+    "source": "climate_study_summary.pdf",
+    "page": 1,
+    "answer_contains": [
+      "2016"
+    ]
+  },
+  {
+    "id": "i07",
+    "question": "What does the vertical axis of the temperature chart measure?",
+    "kind": "image",
+    "source": "climate_study_summary.pdf",
+    "page": 1,
+    "answer_contains": [
+      "temperature"
+    ]
+  },
+  {
+    "id": "o01",
+    "question": "What is the capital of France?",
+    "kind": "offtopic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "o02",
+    "question": "Who won the FIFA World Cup in 2018?",
+    "kind": "offtopic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "o03",
+    "question": "How do I bake sourdough bread at home?",
+    "kind": "offtopic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "o04",
+    "question": "Explain how photosynthesis works.",
+    "kind": "offtopic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "o05",
+    "question": "What is the warranty period of the Atlas X200 laptop?",
+    "kind": "offtopic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "o06",
+    "question": "What was Acme's total revenue in 2019?",
+    "kind": "offtopic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "o07",
+    "question": "How much does the BrewMaster descaling solution cost?",
+    "kind": "offtopic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "t14",
+    "question": "What was Borealis Systems' total revenue in 2025?",
+    "kind": "text",
+    "source": "borealis_annual_report.pdf",
+    "page": 0,
+    "answer_contains": [
+      "73.5"
+    ]
+  },
+  {
+    "id": "t15",
+    "question": "Who is the chief executive officer of Borealis Systems?",
+    "kind": "text",
+    "source": "borealis_annual_report.pdf",
+    "page": 0,
+    "answer_contains": [
+      "lindqvist"
+    ]
+  },
+  {
+    "id": "t16",
+    "question": "Which product drove Borealis Systems' growth in Q2?",
+    "kind": "text",
+    "source": "borealis_annual_report.pdf",
+    "page": 1,
+    "answer_contains": [
+      "helix"
+    ]
+  },
+  {
+    "id": "t17",
+    "question": "What operating margin did Borealis Systems report for the year?",
+    "kind": "text",
+    "source": "borealis_annual_report.pdf",
+    "page": 1,
+    "answer_contains": [
+      "14%"
+    ]
+  },
+  {
+    "id": "t18",
+    "question": "What was Borealis Systems' annual customer churn rate?",
+    "kind": "text",
+    "source": "borealis_annual_report.pdf",
+    "page": 2,
+    "answer_contains": [
+      "3.1"
+    ]
+  },
+  {
+    "id": "t19",
+    "question": "How many employees does Cedarline Foods have?",
+    "kind": "text",
+    "source": "cedarline_annual_report.pdf",
+    "page": 0,
+    "answer_contains": [
+      "1,850",
+      "1850"
+    ]
+  },
+  {
+    "id": "t20",
+    "question": "In which year was Cedarline Foods founded?",
+    "kind": "text",
+    "source": "cedarline_annual_report.pdf",
+    "page": 0,
+    "answer_contains": [
+      "1978"
+    ]
+  },
+  {
+    "id": "t21",
+    "question": "What revenue target has Cedarline Foods set for 2026?",
+    "kind": "text",
+    "source": "cedarline_annual_report.pdf",
+    "page": 3,
+    "answer_contains": [
+      "225"
+    ]
+  },
+  {
+    "id": "t22",
+    "question": "What dividend per share did the Cedarline Foods board propose?",
+    "kind": "text",
+    "source": "cedarline_annual_report.pdf",
+    "page": 3,
+    "answer_contains": [
+      "1.10"
+    ]
+  },
+  {
+    "id": "t23",
+    "question": "How many customers did Delphi Logistics serve at the end of 2025?",
+    "kind": "text",
+    "source": "delphi_annual_report.pdf",
+    "page": 2,
+    "answer_contains": [
+      "860"
+    ]
+  },
+  {
+    "id": "t24",
+    "question": "Which product drove Delphi Logistics' growth in Q3?",
+    "kind": "text",
+    "source": "delphi_annual_report.pdf",
+    "page": 1,
+    "answer_contains": [
+      "routeiq"
+    ]
+  },
+  {
+    "id": "t25",
+    "question": "Where is Delphi Logistics headquartered?",
+    "kind": "text",
+    "source": "delphi_annual_report.pdf",
+    "page": 0,
+    "answer_contains": [
+      "chicago"
+    ]
+  },
+  {
+    "id": "t26",
+    "question": "How large a room can the AirPure 200 cover?",
+    "kind": "text",
+    "source": "airpure_200_manual.pdf",
+    "page": 0,
+    "answer_contains": [
+      "35 square"
+    ]
+  },
+  {
+    "id": "t27",
+    "question": "How often must the AirPure 200 HEPA filter be replaced?",
+    "kind": "text",
+    "source": "airpure_200_manual.pdf",
+    "page": 0,
+    "answer_contains": [
+      "6 months",
+      "six months"
+    ]
+  },
+  {
+    "id": "t28",
+    "question": "What does code F5 mean on the AirPure 200?",
+    "kind": "text",
+    "source": "airpure_200_manual.pdf",
+    "page": 2,
+    "answer_contains": [
+      "fan",
+      "blocked"
+    ]
+  },
+  {
+    "id": "t29",
+    "question": "How much does the AirPure replacement filter cost?",
+    "kind": "text",
+    "source": "airpure_200_manual.pdf",
+    "page": 2,
+    "answer_contains": [
+      "$39"
+    ]
+  },
+  {
+    "id": "t30",
+    "question": "What is the maximum capacity of the KettleMax 1.7?",
+    "kind": "text",
+    "source": "kettlemax_manual.pdf",
+    "page": 0,
+    "answer_contains": [
+      "1.7"
+    ]
+  },
+  {
+    "id": "t31",
+    "question": "How often should the KettleMax be descaled?",
+    "kind": "text",
+    "source": "kettlemax_manual.pdf",
+    "page": 2,
+    "answer_contains": [
+      "2 months",
+      "two months"
+    ]
+  },
+  {
+    "id": "t32",
+    "question": "What does it mean when the kettle light flashes three times?",
+    "kind": "text",
+    "source": "kettlemax_manual.pdf",
+    "page": 2,
+    "answer_contains": [
+      "dry-boil",
+      "dry boil"
+    ]
+  },
+  {
+    "id": "t33",
+    "question": "How much total output power does the SoundBar X deliver?",
+    "kind": "text",
+    "source": "soundbar_x_manual.pdf",
+    "page": 0,
+    "answer_contains": [
+      "120 watts",
+      "120 w"
+    ]
+  },
+  {
+    "id": "t34",
+    "question": "Which Bluetooth version does the SoundBar X support?",
+    "kind": "text",
+    "source": "soundbar_x_manual.pdf",
+    "page": 0,
+    "answer_contains": [
+      "5.3"
+    ]
+  },
+  {
+    "id": "t35",
+    "question": "How do you reset the SoundBar X to factory settings?",
+    "kind": "text",
+    "source": "soundbar_x_manual.pdf",
+    "page": 2,
+    "answer_contains": [
+      "volume down"
+    ]
+  },
+  {
+    "id": "t36",
+    "question": "How many sensors were used in the urban air quality study?",
+    "kind": "text",
+    "source": "urban_air_quality_study.pdf",
+    "page": 0,
+    "answer_contains": [
+      "64"
+    ]
+  },
+  {
+    "id": "t37",
+    "question": "Who funded the urban air quality study?",
+    "kind": "text",
+    "source": "urban_air_quality_study.pdf",
+    "page": 2,
+    "answer_contains": [
+      "clean cities initiative"
+    ]
+  },
+  {
+    "id": "t38",
+    "question": "What statistical model was used in the urban air quality study?",
+    "kind": "text",
+    "source": "urban_air_quality_study.pdf",
+    "page": 2,
+    "answer_contains": [
+      "mixed-effects"
+    ]
+  },
+  {
+    "id": "t39",
+    "question": "How many plots were used in the soil moisture trial?",
+    "kind": "text",
+    "source": "soil_moisture_trial.pdf",
+    "page": 0,
+    "answer_contains": [
+      "120 plots"
+    ]
+  },
+  {
+    "id": "t40",
+    "question": "Which statistical test was used to compare irrigation levels?",
+    "kind": "text",
+    "source": "soil_moisture_trial.pdf",
+    "page": 2,
+    "answer_contains": [
+      "anova"
+    ]
+  },
+  {
+    "id": "t41",
+    "question": "How many participants were enrolled in the sleep and memory study?",
+    "kind": "text",
+    "source": "sleep_memory_study.pdf",
+    "page": 0,
+    "answer_contains": [
+      "240"
+    ]
+  },
+  {
+    "id": "t42",
+    "question": "Who funded the sleep and memory study?",
+    "kind": "text",
+    "source": "sleep_memory_study.pdf",
+    "page": 2,
+    "answer_contains": [
+      "wellness science trust"
+    ]
+  },
+  {
+    "id": "t43",
+    "question": "How many days of paid annual leave do full-time employees receive?",
+    "kind": "text",
+    "source": "employee_handbook.pdf",
+    "page": 0,
+    "answer_contains": [
+      "24 days"
+    ]
+  },
+  {
+    "id": "t44",
+    "question": "How long is the probation period for new employees?",
+    "kind": "text",
+    "source": "employee_handbook.pdf",
+    "page": 2,
+    "answer_contains": [
+      "3 months",
+      "three months"
+    ]
+  },
+  {
+    "id": "t45",
+    "question": "What is the annual learning budget per employee?",
+    "kind": "text",
+    "source": "employee_handbook.pdf",
+    "page": 3,
+    "answer_contains": [
+      "$800"
+    ]
+  },
+  {
+    "id": "t46",
+    "question": "What is the daily meal allowance in the travel policy?",
+    "kind": "text",
+    "source": "travel_expense_policy.pdf",
+    "page": 0,
+    "answer_contains": [
+      "$45"
+    ]
+  },
+  {
+    "id": "t47",
+    "question": "Above what amount are receipts required for expenses?",
+    "kind": "text",
+    "source": "travel_expense_policy.pdf",
+    "page": 1,
+    "answer_contains": [
+      "$25"
+    ]
+  },
+  {
+    "id": "t48",
+    "question": "Within how many days are approved expense claims reimbursed?",
+    "kind": "text",
+    "source": "travel_expense_policy.pdf",
+    "page": 2,
+    "answer_contains": [
+      "14 days"
+    ]
+  },
+  {
+    "id": "t49",
+    "question": "What is the minimum password length required by the IT security guidelines?",
+    "kind": "text",
+    "source": "it_security_guidelines.pdf",
+    "page": 0,
+    "answer_contains": [
+      "14 characters"
+    ]
+  },
+  {
+    "id": "t50",
+    "question": "How quickly must lost or stolen devices be reported?",
+    "kind": "text",
+    "source": "it_security_guidelines.pdf",
+    "page": 1,
+    "answer_contains": [
+      "4 hours"
+    ]
+  },
+  {
+    "id": "t51",
+    "question": "Which encryption standard must company laptops use?",
+    "kind": "text",
+    "source": "it_security_guidelines.pdf",
+    "page": 1,
+    "answer_contains": [
+      "aes-256"
+    ]
+  },
+  {
+    "id": "i08",
+    "question": "In the Borealis monthly active users chart, in which month did users peak?",
+    "kind": "image",
+    "source": "borealis_annual_report.pdf",
+    "page": 1,
+    "answer_contains": [
+      "october"
+    ]
+  },
+  {
+    "id": "i09",
+    "question": "Which product line has the largest sales in the Cedarline Foods sales chart?",
+    "kind": "image",
+    "source": "cedarline_annual_report.pdf",
+    "page": 1,
+    "answer_contains": [
+      "dairy"
+    ]
+  },
+  {
+    "id": "i10",
+    "question": "What share of Cedarline Foods' costs goes to ingredients in the cost breakdown pie chart?",
+    "kind": "image",
+    "source": "cedarline_annual_report.pdf",
+    "page": 2,
+    "answer_contains": [
+      "40%",
+      "40 percent"
+    ]
+  },
+  {
+    "id": "i11",
+    "question": "Which region has the lowest on-time delivery rate in the Delphi Logistics chart?",
+    "kind": "image",
+    "source": "delphi_annual_report.pdf",
+    "page": 1,
+    "answer_contains": [
+      "middle east"
+    ]
+  },
+  {
+    "id": "i12",
+    "question": "In the AirPure 200 diagram, which component sits between the fan unit and the air intake?",
+    "kind": "image",
+    "source": "airpure_200_manual.pdf",
+    "page": 1,
+    "answer_contains": [
+      "hepa"
+    ]
+  },
+  {
+    "id": "i13",
+    "question": "In the KettleMax diagram, which part sits directly below the water chamber?",
+    "kind": "image",
+    "source": "kettlemax_manual.pdf",
+    "page": 1,
+    "answer_contains": [
+      "heating base"
+    ]
+  },
+  {
+    "id": "i14",
+    "question": "In the SoundBar X connection diagram, which port is directly below the optical input?",
+    "kind": "image",
+    "source": "soundbar_x_manual.pdf",
+    "page": 1,
+    "answer_contains": [
+      "usb"
+    ]
+  },
+  {
+    "id": "i15",
+    "question": "In which year did the urban NO2 concentration chart reach its peak?",
+    "kind": "image",
+    "source": "urban_air_quality_study.pdf",
+    "page": 1,
+    "answer_contains": [
+      "2019"
+    ]
+  },
+  {
+    "id": "i16",
+    "question": "Which irrigation level gives the highest maize yield in the soil trial chart?",
+    "kind": "image",
+    "source": "soil_moisture_trial.pdf",
+    "page": 1,
+    "answer_contains": [
+      "high"
+    ]
+  },
+  {
+    "id": "i17",
+    "question": "Which group has the highest mean recall score in the sleep study chart?",
+    "kind": "image",
+    "source": "sleep_memory_study.pdf",
+    "page": 1,
+    "answer_contains": [
+      "8-hour",
+      "8 hour"
+    ]
+  },
+  {
+    "id": "o08",
+    "question": "Who painted the Mona Lisa?",
+    "kind": "offtopic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "o09",
+    "question": "What is the tallest mountain in the world?",
+    "kind": "offtopic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "o10",
+    "question": "How many players are on a football team on the field?",
+    "kind": "offtopic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "o11",
+    "question": "What is the chemical symbol for gold?",
+    "kind": "offtopic",
+    "difficulty": "easy"
+  },
+  {
+    "id": "o12",
+    "question": "What was Borealis Systems' total revenue in 2022?",
+    "kind": "offtopic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "o13",
+    "question": "Who is the chief financial officer of Cedarline Foods?",
+    "kind": "offtopic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "o14",
+    "question": "Which airline is the preferred carrier under the travel policy?",
+    "kind": "offtopic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "o15",
+    "question": "What is the noise level of the AirPure 300?",
+    "kind": "offtopic",
+    "difficulty": "hard"
+  },
+  {
+    "id": "o16",
+    "question": "How long is the warranty on the SoundBar Y?",
+    "kind": "offtopic",
+    "difficulty": "hard"
+  }
+]

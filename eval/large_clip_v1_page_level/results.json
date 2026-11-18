@@ -1,0 +1,5132 @@
+{
+  "config": {
+    "clip": "openai/clip-vit-base-patch32",
+    "k": 5,
+    "text_thr": 0.55,
+    "image_thr": 0.2,
+    "n_pdfs": 15,
+    "n_text": 70,
+    "n_images": 14
+  },
+  "summary": {
+    "text": {
+      "n": 51,
+      "hit@1": 0.35294117647058826,
+      "hit@k": 0.5490196078431373,
+      "mrr": 0.4160130718954248,
+      "gate_open": 1.0,
+      "kept_hit": 0.5490196078431373
+    },
+    "image": {
+      "n": 17,
+      "hit@1": 1.0,
+      "hit@k": 1.0,
+      "mrr": 1.0,
+      "gate_open": 1.0,
+      "kept_hit": 1.0
+    },
+    "all": {
+      "n": 68,
+      "hit@1": 0.5147058823529411,
+      "hit@k": 0.6617647058823529,
+      "mrr": 0.5620098039215686,
+      "gate_open": 1.0,
+      "kept_hit": 0.6617647058823529
+    },
+    "offtopic_easy": {
+      "n": 8,
+      "blocked": 0.0
+    },
+    "offtopic_hard": {
+      "n": 8,
+      "blocked": 0.0
+    }
+  },
+  "llm_summary": null,
+  "suggested_thresholds": {
+    "text_min_sim": 0.825,
+    "image_min_sim": 0.26,
+    "kept_hit": 0.39705882352941174,
+    "easy_blocked": 1.0,
+    "score": 0.6985294117647058,
+    "n_equally_good": 5
+  },
+  "questions": [
+    {
+      "id": "t01",
+      "question": "What was Acme's total revenue in 2025?",
+      "kind": "text",
+      "source": "acme_annual_report.pdf",
+      "page": 0,
+      "answer_contains": [
+        "48.2"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8088
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7992
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7924
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7924
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7924
+        },
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.3199
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3089
+        }
+      ]
+    },
+    {
+      "id": "t02",
+      "question": "How many employees does Acme have?",
+      "kind": "text",
+      "source": "acme_annual_report.pdf",
+      "page": 0,
+      "answer_contains": [
+        "310"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7471
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7471
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7471
+        },
+        {
+          "rank": 4,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.743
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7327
+        },
+        {
+          "rank": 1,
+          "source": "sleep_memory_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2076
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2053
+        }
+      ]
+    },
+    {
+      "id": "t03",
+      "question": "Which product drove Acme's growth in Q3?",
+      "kind": "text",
+      "source": "acme_annual_report.pdf",
+      "page": 1,
+      "answer_contains": [
+        "atlas"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8258
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7738
+        },
+        {
+          "rank": 3,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.772
+        },
+        {
+          "rank": 4,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7719
+        },
+        {
+          "rank": 5,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7719
+        },
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2896
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.279
+        }
+      ]
+    },
+    {
+      "id": "t04",
+      "question": "What was Acme's annual customer churn rate?",
+      "kind": "text",
+      "source": "acme_annual_report.pdf",
+      "page": 2,
+      "answer_contains": [
+        "4.3"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7519
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7431
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7431
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7431
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7289
+        },
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2433
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2366
+        }
+      ]
+    },
+    {
+      "id": "t05",
+      "question": "What revenue target has Acme set for 2026?",
+      "kind": "text",
+      "source": "acme_annual_report.pdf",
+      "page": 3,
+      "answer_contains": [
+        "55"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8153
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8049
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8049
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8049
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8044
+        },
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.33
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3205
+        }
+      ]
+    },
+    {
+      "id": "t06",
+      "question": "What is the capacity of the BrewMaster water tank?",
+      "kind": "text",
+      "source": "brewmaster_manual.pdf",
+      "page": 0,
+      "answer_contains": [
+        "1.8"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7697
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7697
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7697
+        },
+        {
+          "rank": 4,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7614
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7523
+        },
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3587
+        },
+        {
+          "rank": 2,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2616
+        }
+      ]
+    },
+    {
+      "id": "t07",
+      "question": "How long is the BrewMaster 3000 warranty?",
+      "kind": "text",
+      "source": "brewmaster_manual.pdf",
+      "page": 0,
+      "answer_contains": [
+        "2-year",
+        "2 year",
+        "two year",
+        "two-year"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7733
+        },
+        {
+          "rank": 2,
+          "source": "kettlemax_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7733
+        },
+        {
+          "rank": 3,
+          "source": "soundbar_x_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7733
+        },
+        {
+          "rank": 4,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7724
+        },
+        {
+          "rank": 5,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7724
+        },
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3071
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2142
+        }
+      ]
+    },
+    {
+      "id": "t08",
+      "question": "What does error E7 mean on the coffee machine?",
+      "kind": "text",
+      "source": "brewmaster_manual.pdf",
+      "page": 2,
+      "answer_contains": [
+        "clog"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.736
+        },
+        {
+          "rank": 2,
+          "source": "kettlemax_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.736
+        },
+        {
+          "rank": 3,
+          "source": "soundbar_x_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.736
+        },
+        {
+          "rank": 4,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7232
+        },
+        {
+          "rank": 5,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6908
+        },
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2116
+        },
+        {
+          "rank": 2,
+          "source": "soundbar_x_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2097
+        }
+      ]
+    },
+    {
+      "id": "t09",
+      "question": "How often should the coffee machine be descaled?",
+      "kind": "text",
+      "source": "brewmaster_manual.pdf",
+      "page": 2,
+      "answer_contains": [
+        "3 months",
+        "three months"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8009
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8009
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8009
+        },
+        {
+          "rank": 4,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7886
+        },
+        {
+          "rank": 5,
+          "source": "kettlemax_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7886
+        },
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2698
+        },
+        {
+          "rank": 2,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2368
+        }
+      ]
+    },
+    {
+      "id": "t10",
+      "question": "How many buoys were used in the temperature study?",
+      "kind": "text",
+      "source": "climate_study_summary.pdf",
+      "page": 0,
+      "answer_contains": [
+        "42"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8261
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7744
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7744
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7744
+        },
+        {
+          "rank": 5,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7632
+        },
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2901
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2581
+        }
+      ]
+    },
+    {
+      "id": "t11",
+      "question": "By how much did mean sea surface temperature rise between 2000 and 2024?",
+      "kind": "text",
+      "source": "climate_study_summary.pdf",
+      "page": 0,
+      "answer_contains": [
+        "0.9"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8354
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.768
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.768
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.768
+        },
+        {
+          "rank": 5,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7657
+        },
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3675
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2906
+        }
+      ]
+    },
+    {
+      "id": "t12",
+      "question": "Which statistical method was used to estimate temperature trends?",
+      "kind": "text",
+      "source": "climate_study_summary.pdf",
+      "page": 2,
+      "answer_contains": [
+        "regression"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8625
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8625
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8625
+        },
+        {
+          "rank": 4,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8521
+        },
+        {
+          "rank": 5,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8427
+        },
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.298
+        },
+        {
+          "rank": 2,
+          "source": "soil_moisture_trial.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2547
+        }
+      ]
+    },
+    {
+      "id": "t13",
+      "question": "Who funded the sea temperature study?",
+      "kind": "text",
+      "source": "climate_study_summary.pdf",
+      "page": 2,
+      "answer_contains": [
+        "national ocean research fund"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8532
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8345
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8345
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8345
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8192
+        },
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3305
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2677
+        }
+      ]
+    },
+    {
+      "id": "i01",
+      "question": "According to the pie chart, which region contributes the largest share of revenue?",
+      "kind": "image",
+      "source": "acme_annual_report.pdf",
+      "page": 2,
+      "answer_contains": [
+        "north america"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7689
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.756
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.756
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.756
+        },
+        {
+          "rank": 5,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7521
+        },
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.3392
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2698
+        }
+      ]
+    },
+    {
+      "id": "i02",
+      "question": "What percentage of revenue comes from Asia in the revenue by region chart?",
+      "kind": "image",
+      "source": "acme_annual_report.pdf",
+      "page": 2,
+      "answer_contains": [
+        "25"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7756
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7756
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7756
+        },
+        {
+          "rank": 4,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7754
+        },
+        {
+          "rank": 5,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7738
+        },
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.3661
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2867
+        }
+      ]
+    },
+    {
+      "id": "i03",
+      "question": "Which quarter has the tallest bar in the quarterly revenue chart?",
+      "kind": "image",
+      "source": "acme_annual_report.pdf",
+      "page": 1,
+      "answer_contains": [
+        "q4"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.8174
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.8162
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7663
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7663
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7663
+        },
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3353
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2631
+        }
+      ]
+    },
+    {
+      "id": "i04",
+      "question": "In the coffee machine parts diagram, which component sits directly below the brew head?",
+      "kind": "image",
+      "source": "brewmaster_manual.pdf",
+      "page": 1,
+      "answer_contains": [
+        "drip tray"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7657
+        },
+        {
+          "rank": 2,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7214
+        },
+        {
+          "rank": 3,
+          "source": "kettlemax_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7214
+        },
+        {
+          "rank": 4,
+          "source": "soundbar_x_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7214
+        },
+        {
+          "rank": 5,
+          "source": "brewmaster_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7205
+        },
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3474
+        },
+        {
+          "rank": 2,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.274
+        }
+      ]
+    },
+    {
+      "id": "i05",
+      "question": "Which components are labeled in the coffee machine parts diagram?",
+      "kind": "image",
+      "source": "brewmaster_manual.pdf",
+      "page": 1,
+      "answer_contains": [
+        "control panel",
+        "water tank",
+        "brew head",
+        "drip tray"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.731
+        },
+        {
+          "rank": 2,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7071
+        },
+        {
+          "rank": 3,
+          "source": "kettlemax_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7071
+        },
+        {
+          "rank": 4,
+          "source": "soundbar_x_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7071
+        },
+        {
+          "rank": 5,
+          "source": "airpure_200_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6922
+        },
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3054
+        },
+        {
+          "rank": 2,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3025
+        }
+      ]
+    },
+    {
+      "id": "i06",
+      "question": "In which year does the sea surface temperature chart reach its peak?",
+      "kind": "image",
+      "source": "climate_study_summary.pdf",
+      "page": 1,
+      "answer_contains": [
+        "2016"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8119
+        },
+        {
+          "rank": 2,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7896
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.734
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.734
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.734
+        },
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3645
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2718
+        }
+      ]
+    },
+    {
+      "id": "i07",
+      "question": "What does the vertical axis of the temperature chart measure?",
+      "kind": "image",
+      "source": "climate_study_summary.pdf",
+      "page": 1,
+      "answer_contains": [
+        "temperature"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8194
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8194
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8194
+        },
+        {
+          "rank": 4,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.817
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8135
+        },
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2859
+        },
+        {
+          "rank": 2,
+          "source": "soil_moisture_trial.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2628
+        }
+      ]
+    },
+    {
+      "id": "o01",
+      "question": "What is the capital of France?",
+      "kind": "offtopic",
+      "difficulty": "easy",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7844
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7822
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7822
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7822
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7807
+        },
+        {
+          "rank": 1,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.1897
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.1836
+        }
+      ]
+    },
+    {
+      "id": "o02",
+      "question": "Who won the FIFA World Cup in 2018?",
+      "kind": "offtopic",
+      "difficulty": "easy",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7415
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7415
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7415
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7414
+        },
+        {
+          "rank": 5,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7368
+        },
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.1894
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.1878
+        }
+      ]
+    },
+    {
+      "id": "o03",
+      "question": "How do I bake sourdough bread at home?",
+      "kind": "offtopic",
+      "difficulty": "easy",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7392
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7392
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7392
+        },
+        {
+          "rank": 4,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7347
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7337
+        },
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2302
+        },
+        {
+          "rank": 2,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2224
+        }
+      ]
+    },
+    {
+      "id": "o04",
+      "question": "Explain how photosynthesis works.",
+      "kind": "offtopic",
+      "difficulty": "easy",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.781
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7649
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7649
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7649
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7641
+        },
+        {
+          "rank": 1,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2292
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2218
+        }
+      ]
+    },
+    {
+      "id": "o05",
+      "question": "What is the warranty period of the Atlas X200 laptop?",
+      "kind": "offtopic",
+      "difficulty": "hard",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7109
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7109
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7109
+        },
+        {
+          "rank": 4,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7082
+        },
+        {
+          "rank": 5,
+          "source": "kettlemax_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7082
+        },
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2398
+        },
+        {
+          "rank": 2,
+          "source": "soundbar_x_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2217
+        }
+      ]
+    },
+    {
+      "id": "o06",
+      "question": "What was Acme's total revenue in 2019?",
+      "kind": "offtopic",
+      "difficulty": "hard",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8329
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.806
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8004
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8004
+        },
+        {
+          "rank": 5,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7954
+        },
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2942
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2867
+        }
+      ]
+    },
+    {
+      "id": "o07",
+      "question": "How much does the BrewMaster descaling solution cost?",
+      "kind": "offtopic",
+      "difficulty": "hard",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7916
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7916
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7916
+        },
+        {
+          "rank": 4,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.787
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7749
+        },
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3239
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2715
+        }
+      ]
+    },
+    {
+      "id": "t14",
+      "question": "What was Borealis Systems' total revenue in 2025?",
+      "kind": "text",
+      "source": "borealis_annual_report.pdf",
+      "page": 0,
+      "answer_contains": [
+        "73.5"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8487
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8269
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7984
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7984
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7884
+        },
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3414
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.3312
+        }
+      ]
+    },
+    {
+      "id": "t15",
+      "question": "Who is the chief executive officer of Borealis Systems?",
+      "kind": "text",
+      "source": "borealis_annual_report.pdf",
+      "page": 0,
+      "answer_contains": [
+        "lindqvist"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7938
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7908
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7854
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7854
+        },
+        {
+          "rank": 5,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7787
+        },
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2526
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2199
+        }
+      ]
+    },
+    {
+      "id": "t16",
+      "question": "Which product drove Borealis Systems' growth in Q2?",
+      "kind": "text",
+      "source": "borealis_annual_report.pdf",
+      "page": 1,
+      "answer_contains": [
+        "helix"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8283
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8109
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8109
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.8094
+        },
+        {
+          "rank": 5,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8059
+        },
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3276
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3065
+        }
+      ]
+    },
+    {
+      "id": "t17",
+      "question": "What operating margin did Borealis Systems report for the year?",
+      "kind": "text",
+      "source": "borealis_annual_report.pdf",
+      "page": 1,
+      "answer_contains": [
+        "14%"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8223
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7953
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7953
+        },
+        {
+          "rank": 4,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7923
+        },
+        {
+          "rank": 5,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7923
+        },
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3041
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2926
+        }
+      ]
+    },
+    {
+      "id": "t18",
+      "question": "What was Borealis Systems' annual customer churn rate?",
+      "kind": "text",
+      "source": "borealis_annual_report.pdf",
+      "page": 2,
+      "answer_contains": [
+        "3.1"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.837
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7822
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7822
+        },
+        {
+          "rank": 4,
+          "source": "borealis_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7808
+        },
+        {
+          "rank": 5,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7771
+        },
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.307
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2715
+        }
+      ]
+    },
+    {
+      "id": "t19",
+      "question": "How many employees does Cedarline Foods have?",
+      "kind": "text",
+      "source": "cedarline_annual_report.pdf",
+      "page": 0,
+      "answer_contains": [
+        "1,850",
+        "1850"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.796
+        },
+        {
+          "rank": 2,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.783
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7797
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7797
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7797
+        },
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.3643
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3475
+        }
+      ]
+    },
+    {
+      "id": "t20",
+      "question": "In which year was Cedarline Foods founded?",
+      "kind": "text",
+      "source": "cedarline_annual_report.pdf",
+      "page": 0,
+      "answer_contains": [
+        "1978"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8287
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7748
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7744
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7744
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7744
+        },
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.3498
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3486
+        }
+      ]
+    },
+    {
+      "id": "t21",
+      "question": "What revenue target has Cedarline Foods set for 2026?",
+      "kind": "text",
+      "source": "cedarline_annual_report.pdf",
+      "page": 3,
+      "answer_contains": [
+        "225"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8616
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7943
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7643
+        },
+        {
+          "rank": 4,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7611
+        },
+        {
+          "rank": 5,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7548
+        },
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.4196
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.4178
+        }
+      ]
+    },
+    {
+      "id": "t22",
+      "question": "What dividend per share did the Cedarline Foods board propose?",
+      "kind": "text",
+      "source": "cedarline_annual_report.pdf",
+      "page": 3,
+      "answer_contains": [
+        "1.10"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.856
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7851
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7766
+        },
+        {
+          "rank": 4,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7527
+        },
+        {
+          "rank": 5,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7527
+        },
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.4087
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.4019
+        }
+      ]
+    },
+    {
+      "id": "t23",
+      "question": "How many customers did Delphi Logistics serve at the end of 2025?",
+      "kind": "text",
+      "source": "delphi_annual_report.pdf",
+      "page": 2,
+      "answer_contains": [
+        "860"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8364
+        },
+        {
+          "rank": 2,
+          "source": "delphi_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8144
+        },
+        {
+          "rank": 3,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7953
+        },
+        {
+          "rank": 4,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7703
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7703
+        },
+        {
+          "rank": 1,
+          "source": "delphi_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3729
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2909
+        }
+      ]
+    },
+    {
+      "id": "t24",
+      "question": "Which product drove Delphi Logistics' growth in Q3?",
+      "kind": "text",
+      "source": "delphi_annual_report.pdf",
+      "page": 1,
+      "answer_contains": [
+        "routeiq"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "delphi_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8278
+        },
+        {
+          "rank": 2,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8036
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7871
+        },
+        {
+          "rank": 4,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7864
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7794
+        },
+        {
+          "rank": 1,
+          "source": "delphi_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3811
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2729
+        }
+      ]
+    },
+    {
+      "id": "t25",
+      "question": "Where is Delphi Logistics headquartered?",
+      "kind": "text",
+      "source": "delphi_annual_report.pdf",
+      "page": 0,
+      "answer_contains": [
+        "chicago"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8122
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7889
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7889
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7889
+        },
+        {
+          "rank": 5,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7877
+        },
+        {
+          "rank": 1,
+          "source": "delphi_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.36
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2404
+        }
+      ]
+    },
+    {
+      "id": "t26",
+      "question": "How large a room can the AirPure 200 cover?",
+      "kind": "text",
+      "source": "airpure_200_manual.pdf",
+      "page": 0,
+      "answer_contains": [
+        "35 square"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6986
+        },
+        {
+          "rank": 2,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6885
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6771
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6771
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6771
+        },
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3311
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2179
+        }
+      ]
+    },
+    {
+      "id": "t27",
+      "question": "How often must the AirPure 200 HEPA filter be replaced?",
+      "kind": "text",
+      "source": "airpure_200_manual.pdf",
+      "page": 0,
+      "answer_contains": [
+        "6 months",
+        "six months"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7987
+        },
+        {
+          "rank": 2,
+          "source": "airpure_200_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7392
+        },
+        {
+          "rank": 3,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.722
+        },
+        {
+          "rank": 4,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7217
+        },
+        {
+          "rank": 5,
+          "source": "kettlemax_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7217
+        },
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3346
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2448
+        }
+      ]
+    },
+    {
+      "id": "t28",
+      "question": "What does code F5 mean on the AirPure 200?",
+      "kind": "text",
+      "source": "airpure_200_manual.pdf",
+      "page": 2,
+      "answer_contains": [
+        "fan",
+        "blocked"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7375
+        },
+        {
+          "rank": 2,
+          "source": "kettlemax_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7375
+        },
+        {
+          "rank": 3,
+          "source": "soundbar_x_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7375
+        },
+        {
+          "rank": 4,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7363
+        },
+        {
+          "rank": 5,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7308
+        },
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3015
+        },
+        {
+          "rank": 2,
+          "source": "soundbar_x_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2271
+        }
+      ]
+    },
+    {
+      "id": "t29",
+      "question": "How much does the AirPure replacement filter cost?",
+      "kind": "text",
+      "source": "airpure_200_manual.pdf",
+      "page": 2,
+      "answer_contains": [
+        "$39"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7692
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7259
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7259
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7259
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7173
+        },
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3037
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2352
+        }
+      ]
+    },
+    {
+      "id": "t30",
+      "question": "What is the maximum capacity of the KettleMax 1.7?",
+      "kind": "text",
+      "source": "kettlemax_manual.pdf",
+      "page": 0,
+      "answer_contains": [
+        "1.7"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7875
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7875
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7875
+        },
+        {
+          "rank": 4,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7609
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7513
+        },
+        {
+          "rank": 1,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2867
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2425
+        }
+      ]
+    },
+    {
+      "id": "t31",
+      "question": "How often should the KettleMax be descaled?",
+      "kind": "text",
+      "source": "kettlemax_manual.pdf",
+      "page": 2,
+      "answer_contains": [
+        "2 months",
+        "two months"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8282
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8282
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8282
+        },
+        {
+          "rank": 4,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7941
+        },
+        {
+          "rank": 5,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7937
+        },
+        {
+          "rank": 1,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2906
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2591
+        }
+      ]
+    },
+    {
+      "id": "t32",
+      "question": "What does it mean when the kettle light flashes three times?",
+      "kind": "text",
+      "source": "kettlemax_manual.pdf",
+      "page": 2,
+      "answer_contains": [
+        "dry-boil",
+        "dry boil"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7722
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7722
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7722
+        },
+        {
+          "rank": 4,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.767
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7455
+        },
+        {
+          "rank": 1,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2495
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2137
+        }
+      ]
+    },
+    {
+      "id": "t33",
+      "question": "How much total output power does the SoundBar X deliver?",
+      "kind": "text",
+      "source": "soundbar_x_manual.pdf",
+      "page": 0,
+      "answer_contains": [
+        "120 watts",
+        "120 w"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "soundbar_x_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7652
+        },
+        {
+          "rank": 2,
+          "source": "soundbar_x_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6866
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6748
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6748
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6748
+        },
+        {
+          "rank": 1,
+          "source": "soundbar_x_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2698
+        },
+        {
+          "rank": 2,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2381
+        }
+      ]
+    },
+    {
+      "id": "t34",
+      "question": "Which Bluetooth version does the SoundBar X support?",
+      "kind": "text",
+      "source": "soundbar_x_manual.pdf",
+      "page": 0,
+      "answer_contains": [
+        "5.3"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "soundbar_x_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7459
+        },
+        {
+          "rank": 2,
+          "source": "soundbar_x_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7194
+        },
+        {
+          "rank": 3,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7187
+        },
+        {
+          "rank": 4,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7164
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7164
+        },
+        {
+          "rank": 1,
+          "source": "soundbar_x_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2744
+        },
+        {
+          "rank": 2,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2355
+        }
+      ]
+    },
+    {
+      "id": "t35",
+      "question": "How do you reset the SoundBar X to factory settings?",
+      "kind": "text",
+      "source": "soundbar_x_manual.pdf",
+      "page": 2,
+      "answer_contains": [
+        "volume down"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "soundbar_x_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7448
+        },
+        {
+          "rank": 2,
+          "source": "soundbar_x_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7246
+        },
+        {
+          "rank": 3,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7072
+        },
+        {
+          "rank": 4,
+          "source": "kettlemax_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7072
+        },
+        {
+          "rank": 5,
+          "source": "soundbar_x_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7072
+        },
+        {
+          "rank": 1,
+          "source": "soundbar_x_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2674
+        },
+        {
+          "rank": 2,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2519
+        }
+      ]
+    },
+    {
+      "id": "t36",
+      "question": "How many sensors were used in the urban air quality study?",
+      "kind": "text",
+      "source": "urban_air_quality_study.pdf",
+      "page": 0,
+      "answer_contains": [
+        "64"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8331
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7869
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7869
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7869
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7819
+        },
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.28
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2523
+        }
+      ]
+    },
+    {
+      "id": "t37",
+      "question": "Who funded the urban air quality study?",
+      "kind": "text",
+      "source": "urban_air_quality_study.pdf",
+      "page": 2,
+      "answer_contains": [
+        "clean cities initiative"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8109
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8089
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8089
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8089
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8054
+        },
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2653
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2298
+        }
+      ]
+    },
+    {
+      "id": "t38",
+      "question": "What statistical model was used in the urban air quality study?",
+      "kind": "text",
+      "source": "urban_air_quality_study.pdf",
+      "page": 2,
+      "answer_contains": [
+        "mixed-effects"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8323
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8266
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8266
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8266
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8188
+        },
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2627
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.255
+        }
+      ]
+    },
+    {
+      "id": "t39",
+      "question": "How many plots were used in the soil moisture trial?",
+      "kind": "text",
+      "source": "soil_moisture_trial.pdf",
+      "page": 0,
+      "answer_contains": [
+        "120 plots"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.811
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.811
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.811
+        },
+        {
+          "rank": 4,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8007
+        },
+        {
+          "rank": 5,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7923
+        },
+        {
+          "rank": 1,
+          "source": "soil_moisture_trial.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2821
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2398
+        }
+      ]
+    },
+    {
+      "id": "t40",
+      "question": "Which statistical test was used to compare irrigation levels?",
+      "kind": "text",
+      "source": "soil_moisture_trial.pdf",
+      "page": 2,
+      "answer_contains": [
+        "anova"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7973
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7954
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7954
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7954
+        },
+        {
+          "rank": 5,
+          "source": "soil_moisture_trial.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.779
+        },
+        {
+          "rank": 1,
+          "source": "soil_moisture_trial.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3238
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2656
+        }
+      ]
+    },
+    {
+      "id": "t41",
+      "question": "How many participants were enrolled in the sleep and memory study?",
+      "kind": "text",
+      "source": "sleep_memory_study.pdf",
+      "page": 0,
+      "answer_contains": [
+        "240"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "sleep_memory_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8155
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.813
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.813
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.813
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8036
+        },
+        {
+          "rank": 1,
+          "source": "sleep_memory_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3146
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2096
+        }
+      ]
+    },
+    {
+      "id": "t42",
+      "question": "Who funded the sleep and memory study?",
+      "kind": "text",
+      "source": "sleep_memory_study.pdf",
+      "page": 2,
+      "answer_contains": [
+        "wellness science trust"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8226
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8226
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8226
+        },
+        {
+          "rank": 4,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8069
+        },
+        {
+          "rank": 5,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8012
+        },
+        {
+          "rank": 1,
+          "source": "sleep_memory_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2843
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2237
+        }
+      ]
+    },
+    {
+      "id": "t43",
+      "question": "How many days of paid annual leave do full-time employees receive?",
+      "kind": "text",
+      "source": "employee_handbook.pdf",
+      "page": 0,
+      "answer_contains": [
+        "24 days"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7895
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7895
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7895
+        },
+        {
+          "rank": 4,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7877
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7877
+        },
+        {
+          "rank": 1,
+          "source": "sleep_memory_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2212
+        },
+        {
+          "rank": 2,
+          "source": "delphi_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2172
+        }
+      ]
+    },
+    {
+      "id": "t44",
+      "question": "How long is the probation period for new employees?",
+      "kind": "text",
+      "source": "employee_handbook.pdf",
+      "page": 2,
+      "answer_contains": [
+        "3 months",
+        "three months"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "employee_handbook.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.822
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.82
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7998
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7998
+        },
+        {
+          "rank": 5,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7933
+        },
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2423
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2225
+        }
+      ]
+    },
+    {
+      "id": "t45",
+      "question": "What is the annual learning budget per employee?",
+      "kind": "text",
+      "source": "employee_handbook.pdf",
+      "page": 3,
+      "answer_contains": [
+        "$800"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8433
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8402
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8402
+        },
+        {
+          "rank": 4,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.835
+        },
+        {
+          "rank": 5,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.835
+        },
+        {
+          "rank": 1,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2513
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2398
+        }
+      ]
+    },
+    {
+      "id": "t46",
+      "question": "What is the daily meal allowance in the travel policy?",
+      "kind": "text",
+      "source": "travel_expense_policy.pdf",
+      "page": 0,
+      "answer_contains": [
+        "$45"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "travel_expense_policy.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8611
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8271
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8124
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8124
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8124
+        },
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2419
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2277
+        }
+      ]
+    },
+    {
+      "id": "t47",
+      "question": "Above what amount are receipts required for expenses?",
+      "kind": "text",
+      "source": "travel_expense_policy.pdf",
+      "page": 1,
+      "answer_contains": [
+        "$25"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "travel_expense_policy.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.8625
+        },
+        {
+          "rank": 2,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8362
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8328
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8328
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8328
+        },
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2282
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.219
+        }
+      ]
+    },
+    {
+      "id": "t48",
+      "question": "Within how many days are approved expense claims reimbursed?",
+      "kind": "text",
+      "source": "travel_expense_policy.pdf",
+      "page": 2,
+      "answer_contains": [
+        "14 days"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8754
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8702
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8546
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8546
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8546
+        },
+        {
+          "rank": 1,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2033
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.1988
+        }
+      ]
+    },
+    {
+      "id": "t49",
+      "question": "What is the minimum password length required by the IT security guidelines?",
+      "kind": "text",
+      "source": "it_security_guidelines.pdf",
+      "page": 0,
+      "answer_contains": [
+        "14 characters"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "it_security_guidelines.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8391
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8068
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7834
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7834
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7834
+        },
+        {
+          "rank": 1,
+          "source": "sleep_memory_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2141
+        },
+        {
+          "rank": 2,
+          "source": "soundbar_x_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2047
+        }
+      ]
+    },
+    {
+      "id": "t50",
+      "question": "How quickly must lost or stolen devices be reported?",
+      "kind": "text",
+      "source": "it_security_guidelines.pdf",
+      "page": 1,
+      "answer_contains": [
+        "4 hours"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8455
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8455
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8455
+        },
+        {
+          "rank": 4,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.836
+        },
+        {
+          "rank": 5,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8348
+        },
+        {
+          "rank": 1,
+          "source": "delphi_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2155
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2153
+        }
+      ]
+    },
+    {
+      "id": "t51",
+      "question": "Which encryption standard must company laptops use?",
+      "kind": "text",
+      "source": "it_security_guidelines.pdf",
+      "page": 1,
+      "answer_contains": [
+        "aes-256"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7808
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7795
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7795
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7795
+        },
+        {
+          "rank": 5,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7716
+        },
+        {
+          "rank": 1,
+          "source": "soundbar_x_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2393
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2265
+        }
+      ]
+    },
+    {
+      "id": "i08",
+      "question": "In the Borealis monthly active users chart, in which month did users peak?",
+      "kind": "image",
+      "source": "borealis_annual_report.pdf",
+      "page": 1,
+      "answer_contains": [
+        "october"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7349
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7349
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7349
+        },
+        {
+          "rank": 4,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7244
+        },
+        {
+          "rank": 5,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7215
+        },
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3742
+        },
+        {
+          "rank": 2,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2222
+        }
+      ]
+    },
+    {
+      "id": "i09",
+      "question": "Which product line has the largest sales in the Cedarline Foods sales chart?",
+      "kind": "image",
+      "source": "cedarline_annual_report.pdf",
+      "page": 1,
+      "answer_contains": [
+        "dairy"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8196
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8022
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7725
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7725
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7725
+        },
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.4341
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.3759
+        }
+      ]
+    },
+    {
+      "id": "i10",
+      "question": "What share of Cedarline Foods' costs goes to ingredients in the cost breakdown pie chart?",
+      "kind": "image",
+      "source": "cedarline_annual_report.pdf",
+      "page": 2,
+      "answer_contains": [
+        "40%",
+        "40 percent"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7499
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7184
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7098
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.6901
+        },
+        {
+          "rank": 5,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6322
+        },
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.4355
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3847
+        }
+      ]
+    },
+    {
+      "id": "i11",
+      "question": "Which region has the lowest on-time delivery rate in the Delphi Logistics chart?",
+      "kind": "image",
+      "source": "delphi_annual_report.pdf",
+      "page": 1,
+      "answer_contains": [
+        "middle east"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7786
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7505
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7485
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7485
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7485
+        },
+        {
+          "rank": 1,
+          "source": "delphi_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.4506
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2505
+        }
+      ]
+    },
+    {
+      "id": "i12",
+      "question": "In the AirPure 200 diagram, which component sits between the fan unit and the air intake?",
+      "kind": "image",
+      "source": "airpure_200_manual.pdf",
+      "page": 1,
+      "answer_contains": [
+        "hepa"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7498
+        },
+        {
+          "rank": 2,
+          "source": "airpure_200_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7239
+        },
+        {
+          "rank": 3,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7112
+        },
+        {
+          "rank": 4,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6652
+        },
+        {
+          "rank": 5,
+          "source": "kettlemax_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6652
+        },
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.375
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2725
+        }
+      ]
+    },
+    {
+      "id": "i13",
+      "question": "In the KettleMax diagram, which part sits directly below the water chamber?",
+      "kind": "image",
+      "source": "kettlemax_manual.pdf",
+      "page": 1,
+      "answer_contains": [
+        "heating base"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7821
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7821
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7821
+        },
+        {
+          "rank": 4,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7616
+        },
+        {
+          "rank": 5,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7511
+        },
+        {
+          "rank": 1,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3599
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.303
+        }
+      ]
+    },
+    {
+      "id": "i14",
+      "question": "In the SoundBar X connection diagram, which port is directly below the optical input?",
+      "kind": "image",
+      "source": "soundbar_x_manual.pdf",
+      "page": 1,
+      "answer_contains": [
+        "usb"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "soundbar_x_manual.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7663
+        },
+        {
+          "rank": 2,
+          "source": "soundbar_x_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7046
+        },
+        {
+          "rank": 3,
+          "source": "soundbar_x_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6924
+        },
+        {
+          "rank": 4,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6432
+        },
+        {
+          "rank": 5,
+          "source": "kettlemax_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.6432
+        },
+        {
+          "rank": 1,
+          "source": "soundbar_x_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3269
+        },
+        {
+          "rank": 2,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2675
+        }
+      ]
+    },
+    {
+      "id": "i15",
+      "question": "In which year did the urban NO2 concentration chart reach its peak?",
+      "kind": "image",
+      "source": "urban_air_quality_study.pdf",
+      "page": 1,
+      "answer_contains": [
+        "2019"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7753
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7753
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7753
+        },
+        {
+          "rank": 4,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7664
+        },
+        {
+          "rank": 5,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7525
+        },
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3421
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2749
+        }
+      ]
+    },
+    {
+      "id": "i16",
+      "question": "Which irrigation level gives the highest maize yield in the soil trial chart?",
+      "kind": "image",
+      "source": "soil_moisture_trial.pdf",
+      "page": 1,
+      "answer_contains": [
+        "high"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "soil_moisture_trial.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7633
+        },
+        {
+          "rank": 2,
+          "source": "soil_moisture_trial.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7208
+        },
+        {
+          "rank": 3,
+          "source": "soil_moisture_trial.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.694
+        },
+        {
+          "rank": 4,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.6277
+        },
+        {
+          "rank": 5,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.6256
+        },
+        {
+          "rank": 1,
+          "source": "soil_moisture_trial.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3881
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2544
+        }
+      ]
+    },
+    {
+      "id": "i17",
+      "question": "Which group has the highest mean recall score in the sleep study chart?",
+      "kind": "image",
+      "source": "sleep_memory_study.pdf",
+      "page": 1,
+      "answer_contains": [
+        "8-hour",
+        "8 hour"
+      ],
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7826
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7826
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7826
+        },
+        {
+          "rank": 4,
+          "source": "sleep_memory_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7745
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7677
+        },
+        {
+          "rank": 1,
+          "source": "sleep_memory_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3899
+        },
+        {
+          "rank": 2,
+          "source": "soil_moisture_trial.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2442
+        }
+      ]
+    },
+    {
+      "id": "o08",
+      "question": "Who painted the Mona Lisa?",
+      "kind": "offtopic",
+      "difficulty": "easy",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8039
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7913
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7913
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7913
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7745
+        },
+        {
+          "rank": 1,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.1845
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.1785
+        }
+      ]
+    },
+    {
+      "id": "o09",
+      "question": "What is the tallest mountain in the world?",
+      "kind": "offtopic",
+      "difficulty": "easy",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7584
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7584
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7584
+        },
+        {
+          "rank": 4,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7434
+        },
+        {
+          "rank": 5,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7412
+        },
+        {
+          "rank": 1,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.1887
+        },
+        {
+          "rank": 2,
+          "source": "climate_study_summary.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.1865
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "question": "How many players are on a football team on the field?",
+      "kind": "offtopic",
+      "difficulty": "easy",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8141
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8141
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8141
+        },
+        {
+          "rank": 4,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8089
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7939
+        },
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.1885
+        },
+        {
+          "rank": 2,
+          "source": "sleep_memory_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.1879
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "question": "What is the chemical symbol for gold?",
+      "kind": "offtopic",
+      "difficulty": "easy",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8106
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8106
+        },
+        {
+          "rank": 3,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.8106
+        },
+        {
+          "rank": 4,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7984
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7949
+        },
+        {
+          "rank": 1,
+          "source": "kettlemax_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2188
+        },
+        {
+          "rank": 2,
+          "source": "brewmaster_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2062
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "question": "What was Borealis Systems' total revenue in 2022?",
+      "kind": "offtopic",
+      "difficulty": "hard",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.849
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.8177
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7975
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7975
+        },
+        {
+          "rank": 5,
+          "source": "acme_annual_report.pdf",
+          "page": 1,
+          "type": "text",
+          "sim": 0.7849
+        },
+        {
+          "rank": 1,
+          "source": "borealis_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3407
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.3212
+        }
+      ]
+    },
+    {
+      "id": "o13",
+      "question": "Who is the chief financial officer of Cedarline Foods?",
+      "kind": "offtopic",
+      "difficulty": "hard",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8169
+        },
+        {
+          "rank": 2,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8017
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7971
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7971
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.7971
+        },
+        {
+          "rank": 1,
+          "source": "cedarline_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.3638
+        },
+        {
+          "rank": 2,
+          "source": "cedarline_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3571
+        }
+      ]
+    },
+    {
+      "id": "o14",
+      "question": "Which airline is the preferred carrier under the travel policy?",
+      "kind": "offtopic",
+      "difficulty": "hard",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8201
+        },
+        {
+          "rank": 2,
+          "source": "travel_expense_policy.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.8174
+        },
+        {
+          "rank": 3,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.807
+        },
+        {
+          "rank": 4,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.807
+        },
+        {
+          "rank": 5,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.807
+        },
+        {
+          "rank": 1,
+          "source": "delphi_annual_report.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2354
+        },
+        {
+          "rank": 2,
+          "source": "acme_annual_report.pdf",
+          "page": 2,
+          "type": "image",
+          "sim": 0.2344
+        }
+      ]
+    },
+    {
+      "id": "o15",
+      "question": "What is the noise level of the AirPure 300?",
+      "kind": "offtopic",
+      "difficulty": "hard",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7688
+        },
+        {
+          "rank": 2,
+          "source": "borealis_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.764
+        },
+        {
+          "rank": 3,
+          "source": "cedarline_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.764
+        },
+        {
+          "rank": 4,
+          "source": "delphi_annual_report.pdf",
+          "page": 3,
+          "type": "text",
+          "sim": 0.764
+        },
+        {
+          "rank": 5,
+          "source": "urban_air_quality_study.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7488
+        },
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.3042
+        },
+        {
+          "rank": 2,
+          "source": "sleep_memory_study.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2321
+        }
+      ]
+    },
+    {
+      "id": "o16",
+      "question": "How long is the warranty on the SoundBar Y?",
+      "kind": "offtopic",
+      "difficulty": "hard",
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "airpure_200_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7433
+        },
+        {
+          "rank": 2,
+          "source": "kettlemax_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7433
+        },
+        {
+          "rank": 3,
+          "source": "soundbar_x_manual.pdf",
+          "page": 2,
+          "type": "text",
+          "sim": 0.7433
+        },
+        {
+          "rank": 4,
+          "source": "soundbar_x_manual.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.734
+        },
+        {
+          "rank": 5,
+          "source": "employee_handbook.pdf",
+          "page": 0,
+          "type": "text",
+          "sim": 0.7294
+        },
+        {
+          "rank": 1,
+          "source": "soundbar_x_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2304
+        },
+        {
+          "rank": 2,
+          "source": "airpure_200_manual.pdf",
+          "page": 1,
+          "type": "image",
+          "sim": 0.2214
+        }
+      ]
+    }
+  ]
+}
