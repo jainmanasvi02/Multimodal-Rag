@@ -7,6 +7,7 @@ import numpy as np
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from PIL import Image
+from pathlib import Path
 
 from .config import CHUNK_OVERLAP, CHUNK_SIZE, MAX_IMAGE_SIDE
 from .embeddings import embed_image, embed_text
@@ -31,8 +32,9 @@ def ingest_pdf(name: str, data: bytes):
                     page_content=text,
                     metadata={"source": name, "page": page_no, "type": "text"},
                 )
+                label = f"{Path(name).stem.replace('_', ' ')}, page {page_no + 1}: "
                 for chunk in splitter.split_documents([base]):
-                    embeddings.append(embed_text(chunk.page_content))
+                    embeddings.append(embed_text(label + chunk.page_content))
                     docs.append(chunk)
 
             # ---- images ----
